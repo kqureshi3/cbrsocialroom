@@ -1108,6 +1108,206 @@
     transform: translateY(0);
   }
 
+  /* Precedent section */
+  .precedent { background: var(--off-white); }
+
+  .offices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+
+  .office-card {
+    background: white;
+    border: 1px solid var(--grey-100);
+    border-radius: 4px;
+    padding: 1.75rem;
+    border-top: 3px solid var(--kpmg-blue);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .office-card:hover { box-shadow: var(--shadow-md); }
+
+  .office-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--kpmg-blue);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .office-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--grey-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .office-card p {
+    font-size: 0.9rem;
+    color: var(--grey-700);
+    line-height: 1.55;
+  }
+
+  /* Andrew support section */
+  .andrew-support { background: var(--off-white); }
+
+  .support-card {
+    background: white;
+    border: 1px solid var(--grey-100);
+    border-radius: 4px;
+    padding: 2.5rem;
+    border-left: 4px solid var(--kpmg-accent);
+    margin-top: 2rem;
+  }
+
+  .support-card p {
+    font-size: 1rem;
+    color: var(--grey-700);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .support-card p:last-child { margin-bottom: 0; }
+
+  .support-highlight {
+    background: linear-gradient(135deg, rgba(0,51,141,0.04) 0%, rgba(234,170,0,0.12) 100%);
+    border: 1px solid rgba(234,170,0,0.35);
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--grey-900);
+    font-weight: 600;
+  }
+
+  /* Fundraiser section */
+  .fundraiser { background: var(--kpmg-blue); color: white; }
+  .fundraiser .section-eyebrow { color: var(--kpmg-accent); }
+  .fundraiser .section-eyebrow::before { background: var(--kpmg-accent); }
+  .fundraiser h2 { color: white; }
+  .fundraiser .section-intro { color: rgba(255,255,255,0.8); }
+
+  .match-callout {
+    background: var(--kpmg-accent);
+    color: var(--kpmg-blue-deep);
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .tournament-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 800px) {
+    .tournament-info { grid-template-columns: 1fr; }
+  }
+
+  .tournament-details,
+  .donation-tiers {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 2rem;
+  }
+
+  .tournament-details h3,
+  .donation-tiers h3 {
+    font-family: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    color: white;
+  }
+
+  .detail-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+    align-items: flex-start;
+    font-size: 0.93rem;
+  }
+
+  .detail-label {
+    font-weight: 700;
+    color: var(--kpmg-accent);
+    min-width: 70px;
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 0.2em;
+  }
+
+  .detail-value { color: rgba(255,255,255,0.9); line-height: 1.5; }
+
+  .tier {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .tier:last-child { border-bottom: none; }
+
+  .tier-amount {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--kpmg-accent);
+    min-width: 65px;
+    flex-shrink: 0;
+  }
+
+  .tier-desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.4;
+  }
+
+  .tier-desc strong { color: white; }
+
+  .fundraiser-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--kpmg-accent);
+    color: var(--kpmg-blue-deep);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: opacity 0.2s;
+  }
+
+  .fundraiser-cta:hover { opacity: 0.9; }
+
+  .fundraiser-footer {
+    margin-top: 2rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 1.75rem 2rem;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.65;
+  }
+
+  .fundraiser-footer strong { color: white; }
+
   /* Mobile */
   @media (max-width: 700px) {
     nav { padding: 0.85rem 1.5rem; }
@@ -1137,7 +1337,9 @@
     <a href="#intro">Introduction</a>
     <a href="#vision">Vision</a>
     <a href="#benefits">Benefits</a>
-    <a href="#proposal">The Ask</a>
+    <a href="#proposal">Options</a>
+    <a href="#support">Path Forward</a>
+    <a href="#fundraiser">Fundraiser</a>
   </div>
 </nav>
 
@@ -1159,9 +1361,9 @@
     </svg>
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Internal Proposal · KPMG Canberra · Room 8.10</div>
-    <h1>A proposal to introduce a folding table tennis table to <span class="accent">Room 8.10</span> in the KPMG Canberra office.</h1>
-    <p class="hero-sub">A modest, low-risk addition to one Level 8 meeting room — preserving its primary function while creating space for the kind of informal interaction that strengthens team culture, retention, and engagement.</p>
+    <div class="hero-eyebrow">Updated Proposal · KPMG Canberra · Room 8.10</div>
+    <h1>An updated proposal for a table tennis table in <span class="accent">Room 8.10</span> — with two options and a fundraiser plan.</h1>
+    <p class="hero-sub">Following the initial conversation with Andrew and Laren, this revised version presents two options for the room, a new table selection, the fundraiser tournament details, and the ownership group formed to support it.</p>
     <div class="hero-meta">
       <div class="meta-item">
         <span class="meta-label">Prepared for</span>
@@ -1172,8 +1374,8 @@
         <span class="meta-value">Khubaib</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Initial outlay</span>
-        <span class="meta-value">~$200–$300</span>
+        <span class="meta-label">Total budget</span>
+        <span class="meta-value">~$550–$600 (fundraiser matched)</span>
       </div>
     </div>
   </div>
@@ -1185,9 +1387,9 @@
     <h2 class="reveal">A brief note <span class="accent">before we begin.</span></h2>
     <div class="intro-card reveal">
       <p class="intro-greeting">Dear Andrew,</p>
-      <p class="intro-text">My name is <strong>Khubaib</strong>. I'm a consultant in the Actuarial team, one of this year's graduate representatives on the Grad &amp; Vacationer Committee, and a co-founder of the Canberra Games Club. I'm putting this proposal forward in each of those capacities, because the idea sits at the intersection of all three.</p>
-      <p class="intro-text">I'm bringing it to you in your capacity as Chair of the ACT office, because it sits squarely within your portfolio — office culture, the physical environment, and the kind of experience that keeps people genuinely connected to the Canberra practice. It is a small idea, with a deliberately modest ask, but one that addresses a recurring piece of feedback I have heard from the graduate cohort and the wider office over the past several months.</p>
-      <p class="intro-text">The remainder of this document outlines what is being proposed, why it is worth doing, and how we propose to take ownership of it. The ask is a single one: your approval for the table to be used in Room 8.10 and alongside our Canberra office events, funded from the ACT office budget for an initial outlay of ~$200–$300. The Canberra Games Club committee would take responsibility for the table, with the Grad &amp; Vacationer Committee providing support if needed.</p>
+      <p class="intro-text">Thank you for taking the time to discuss the Room 8.10 proposal with Laren and me. This is an updated version of what we walked you through, incorporating the changes we have made since that conversation — so rather than repeating everything from scratch, this note focuses on what is new.</p>
+      <p class="intro-text">The key updates in this version are: we have expanded the proposal to present two options for the room (a dual-use approach vs. a full social room transformation); we have switched the table from Kmart to a higher-quality Rebel Sport Terrasphere T1000, currently on sale at $420; we have scoped and announced a fundraiser tournament on Wednesday 15 July to raise the team's share of the funds; and we have formed a broader ownership group that extends well beyond the graduate cohort.</p>
+      <p class="intro-text">The total cost is now approximately $550–$600 — the table and equipment sit at around $500, with the $50 winner's prize on top. Based on our conversation, the plan is for the team to raise roughly half through the tournament fundraiser, with the office matching every dollar raised. Everything else — the rationale, the accountability structure, and the broader ask — remains as discussed.</p>
     </div>
   </div>
 </section>
@@ -1214,7 +1416,7 @@
           <h3>An informal, optional second life.</h3>
           <p>Outside of meeting bookings — and in particular during monthly Friday drinks, lunch breaks, or after hours — the room becomes available as a social space for those who wish to use it.</p>
           <p>The room can stay closed in its usual configuration to contain the sound, or be opened up to flow into the surrounding floor during office drinks, depending on the occasion.</p>
-          <p>The proposal begins with a folding table tennis table only. We may come back and request a console upon a successful trial.</p>
+          <p>Under Option 1, the room retains its meeting function — the table tennis table simply adds a second life to the space. Option 2 goes further, transforming Room 8.10 into a full social hub. Both options are outlined in the proposal section below.</p>
         </div>
       </div>
       <div class="vision-visual">
@@ -1328,42 +1530,77 @@
   </div>
 </section>
 
+<section id="precedent" class="precedent">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">In Practice</div>
+    <h2 class="reveal">Already part of the <span class="accent">KPMG network.</span></h2>
+    <p class="section-intro reveal">Table tennis tables are not a novelty experiment — they are already embedded in the social fabric at several KPMG offices around Australia. Canberra would be joining a growing group.</p>
+
+    <div class="offices-grid">
+      <div class="office-card reveal">
+        <div class="office-name">Parramatta</div>
+        <h3>Social room for all staff</h3>
+        <p>The Parramatta office has both a table tennis table and a PS5 near the kitchen — a dedicated social space available to all staff, already a fixture of their office culture.</p>
+      </div>
+      <div class="office-card reveal">
+        <div class="office-name">Melbourne</div>
+        <h3>Level 32</h3>
+        <p>Melbourne has a table tennis table on Level 32, integrated into the office environment and available for staff to use.</p>
+      </div>
+      <div class="office-card reveal">
+        <div class="office-name">Brisbane</div>
+        <h3>On request</h3>
+        <p>Brisbane's table is maintained by Workplace Services and brought out when requested — demonstrating a simple, low-overhead model for shared recreational equipment.</p>
+      </div>
+      <div class="office-card reveal">
+        <div class="office-name">Sydney</div>
+        <h3>Expanding access</h3>
+        <p>Sydney currently has a table in the partner lounge. Following planned renovations, it will be made available to all staff — further embedding table tennis as a firm-wide culture initiative.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="proposal" class="proposal">
   <div class="section-inner">
-    <div class="section-eyebrow reveal">The Ask</div>
-    <h2 class="reveal">A folding table tennis table for Room 8.10. <span class="accent">That is the proposal.</span></h2>
-    <p class="section-intro reveal">One ask: your approval for the table to live in Room 8.10, funded from the ACT office budget. The purchase itself is deliberately narrow — a single folding table from Kmart with basic equipment, on a six-month trial.</p>
+    <div class="section-eyebrow reveal">The Options</div>
+    <h2 class="reveal">Two ways Room 8.10 <span class="accent">could come alive.</span></h2>
+    <p class="section-intro reveal">We are proposing two possible approaches — one preserving the room's dual function, the other transforming it fully into a dedicated social space. Both start with the same table: a Terrasphere T1000 from Rebel Sport, currently on sale at $420 (down from $500 RRP). The total budget of approximately $550–$600 covers the table, equipment, and the $50 winner's prize for the fundraiser tournament.</p>
 
     <div class="phases">
       <div class="phase primary reveal">
-        <div class="phase-label">The Proposal — Phase 1</div>
-        <h3>A folding table tennis table, with equipment.</h3>
-        <p>One mid-quality folding table tennis table, sourced from Kmart, along with the necessary equipment (bats, balls, and net) to be purchased alongside it. Stored in the existing storage area within Room 8.10 when the space is in use as a meeting room.</p>
+        <div class="phase-label">Option 1 — Dual Use</div>
+        <h3>Meetings and table tennis. Both, without compromise.</h3>
+        <p>Room 8.10 continues to operate as a large meeting room. The folding table tennis table lives in the existing storage area and is brought out when the room is not booked — preserving the room's primary function entirely.</p>
         <ul class="phase-list">
-          <li>Table sourced from Kmart — <a href="https://www.kmart.com.au/product/table-tennis-table-42691044/?srsltid=AfmBOop1cR5JuSo-kwA9CNIYX-A3fNTVekTbAU0BS7Sa1AfTk41j2jMK" target="_blank" rel="noopener" style="color: var(--kpmg-accent); text-decoration: underline; text-underline-offset: 3px;">view product</a></li>
-          <li>Equipment (bats, balls, net) to be purchased separately</li>
+          <li>Table: Rebel Sport Terrasphere T1000 Indoor — <a href="https://www.rebelsport.com.au/p/terrasphere-t1000-indoor-table-tennis-table-667650.html?cgid=REB0119#start=1" target="_blank" rel="noopener" style="color: var(--kpmg-accent); text-decoration: underline; text-underline-offset: 3px;">view product</a></li>
+          <li>On sale at $420 (RRP $500) — equipment ~$50–$80, plus $50 prize on top, total ~$550–$600</li>
           <li>Folds vertically and fits within standard storage cupboards</li>
           <li>Setup and pack-down each take under two minutes</li>
+          <li>Calendar bookings always take priority — no disruption to meetings</li>
           <li>Six-month trial, followed by a formal review</li>
         </ul>
         <div class="phase-cost">
-          <span class="cost-label">Budget request (ACT Office)</span>
-          <span class="cost-value">~$200–$300</span>
+          <span class="cost-label">Total budget (table + equipment + prize)</span>
+          <span class="cost-value">~$550–$600</span>
         </div>
       </div>
 
       <div class="phase secondary reveal">
-        <div class="phase-label">If the trial succeeds</div>
-        <h3>We may return to request a console.</h3>
-        <p>A Nintendo Switch or similar is not part of this proposal. If the six-month trial is successful, we may come back and request one as a separate ask — subject to a fresh conversation with you at that point.</p>
+        <div class="phase-label">Option 2 — Full Social Room</div>
+        <h3>A dedicated social hub for the Canberra office.</h3>
+        <p>Room 8.10 is transformed into a purpose-built social space — supporting connection, culture, and wellbeing beyond structured meetings. The table tennis table is the anchor, with the room designed to grow over time.</p>
         <ul class="phase-list">
-          <li>Not requested now — contingent on trial success</li>
-          <li>Would be the subject of a separate proposal</li>
-          <li>Decision based on usage data and team feedback from the trial</li>
+          <li>Table tennis table as the anchor activity (same Rebel Sport table)</li>
+          <li>Overflow space for larger kitchen and social events</li>
+          <li>Board games library — accessible to all staff</li>
+          <li>Meditation or quiet-break space</li>
+          <li>Future potential: gaming console, foosball table, or other equipment as the culture grows</li>
+          <li>Builds on the model already in place at Parramatta, Melbourne, Brisbane, and Sydney</li>
         </ul>
         <div class="phase-cost">
-          <span class="cost-label">Investment</span>
-          <span class="cost-value">Not requested</span>
+          <span class="cost-label">Starting investment (same as Option 1)</span>
+          <span class="cost-value">~$550–$600</span>
         </div>
       </div>
     </div>
@@ -1375,7 +1612,7 @@
   <div class="section-inner">
     <div class="section-eyebrow reveal">Accountability</div>
     <h2 class="reveal">Clear ownership, <span class="accent">from day one.</span></h2>
-    <p class="section-intro reveal">A new shared resource only succeeds if someone is genuinely on the hook for it. The Canberra Games Club committee will organise its use and take responsibility for the table's upkeep, with the Grad &amp; Vacationer Committee (CGVC) providing support if needed. A grad roster will be put in place to ensure the table is retrieved from the storeroom each lunchtime and for after-work events such as office drinks, and packed away again the following morning.</p>
+    <p class="section-intro reveal">A new shared resource only succeeds if someone is genuinely on the hook for it. We have already formed a dedicated group to manage and maintain the table — broader than just the graduate cohort, spanning multiple teams and seniority levels. This group will organise usage, manage the roster, and ensure the space is well looked after regardless of which option we pursue. The Grad &amp; Vacationer Committee (CGVC) and Canberra Games Club committee remain involved and supportive.</p>
 
     <div class="commitments">
       <div class="commitment reveal">
@@ -1415,13 +1652,105 @@
 </section>
 
 
+<section id="support" class="andrew-support">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">Your Commitment</div>
+    <h2 class="reveal">Your offer to match — <span class="accent">and how we plan to meet it.</span></h2>
+    <p class="section-intro reveal">When we discussed this with you and Laren, you were open to moving forward — and the model you proposed is both fair and motivating for the team.</p>
+
+    <div class="support-card reveal">
+      <p>You were open to proceeding on one condition: that the team organises a fundraiser and raises roughly half of the required funds. In that case, <strong>you would match every dollar raised</strong> — effectively doubling the contribution from the office.</p>
+      <p>That is the model behind the tournament below. The total budget is approximately $550–$600 (table at $420 on sale, equipment at ~$50–$80, plus the $50 prize). If the team raises ~$275–$300 through the fundraiser, your matching contribution brings the full amount together — and the table gets bought.</p>
+      <div class="support-highlight">
+        Team raises ~$275–$300 → you match ~$275–$300 → ~$550–$600 total → table, equipment, and prize all covered.
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem;">
+      <h3 class="reveal" style="font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; color: var(--grey-900);">A broader ownership group — already formed</h3>
+      <p class="reveal" style="font-size: 1rem; color: var(--grey-700); line-height: 1.7; max-width: 740px;">We have already formed a group to manage and maintain the table — regardless of which option we pursue. This group is intentionally broader than just the graduate cohort: it spans multiple teams and seniority levels, ensuring the table has genuine, durable ownership within the office. It will not rely on any single programme cycle or committee rotation to stay active.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="fundraiser" class="fundraiser">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The Fundraiser</div>
+    <h2 class="reveal">Table Tennis Tournament — <span class="accent">Room 8.10.</span></h2>
+    <p class="section-intro reveal">Every dollar raised goes directly toward buying the table. You have offered to match every dollar the team raises — so a $5 entry becomes $10 toward the table, and a $100 donation becomes $200. Below is the announcement as it will go out to staff.</p>
+
+    <div class="match-callout reveal">
+      You will match every dollar raised — every staff contribution goes twice as far.
+    </div>
+
+    <div class="tournament-info">
+      <div class="tournament-details reveal">
+        <h3>Tournament Details</h3>
+        <div class="detail-row">
+          <span class="detail-label">When</span>
+          <span class="detail-value">Wednesday, 15 July · 12:00–2:00 PM</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Where</span>
+          <span class="detail-value">Room 8.10, KPMG Canberra</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Entry</span>
+          <span class="detail-value">Minimum $5 — donate as much as you like</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Prize</span>
+          <span class="detail-value">Winner takes home a $50 gift card</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Open to</span>
+          <span class="detail-value">All staff — seasoned players and first-timers equally welcome</span>
+        </div>
+        <a href="#" class="fundraiser-cta">
+          Grab your ticket
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="donation-tiers reveal">
+        <h3>Donation Tiers</h3>
+        <div class="tier">
+          <span class="tier-amount">$5+</span>
+          <span class="tier-desc">Tournament entry — join the competition</span>
+        </div>
+        <div class="tier">
+          <span class="tier-amount">$20+</span>
+          <span class="tier-desc"><strong>Supporter recognition</strong> — your name on the tournament scoreboard on the day</span>
+        </div>
+        <div class="tier">
+          <span class="tier-amount">$50+</span>
+          <span class="tier-desc"><strong>Champion recognition</strong> — have a tournament award named after you</span>
+        </div>
+        <div class="tier">
+          <span class="tier-amount">$100+</span>
+          <span class="tier-desc"><strong>Legend status</strong> — your name permanently engraved on the table</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fundraiser-footer reveal">
+      <p>Whether you're a seasoned player or haven't picked up a paddle in years, this is a fantastic way to have fun, meet colleagues, and contribute to something lasting for the whole office. The tournament is open to all staff.</p>
+      <p style="margin-top: 0.85rem;">For any questions, reach out to <strong>Khubaib</strong> (<a href="mailto:kqureshi3@kpmg.com.au" style="color: var(--kpmg-accent);">kqureshi3@kpmg.com.au</a>) or <strong>Mebin</strong> (<a href="mailto:mbiju1@kpmg.com.au" style="color: var(--kpmg-accent);">mbiju1@kpmg.com.au</a>).</p>
+      <p style="margin-top: 0.85rem; font-style: italic; color: rgba(255,255,255,0.5); font-size: 0.88rem;">KPMG Canberra PingPong Well</p>
+    </div>
+  </div>
+</section>
+
+
 <section class="closing">
   <div class="closing-inner">
     <div class="closing-logo kpmg-logo-white reveal"></div>
     <div class="section-eyebrow reveal" style="color: var(--kpmg-accent); justify-content: center;">In closing</div>
     <h2 class="reveal">A small bet on <span class="accent">a stronger office.</span></h2>
-    <p class="reveal">If the trial succeeds, Canberra ends up with one of the more distinctive small-office cultures in the network for a one-off cost in the low hundreds. If it does not, very little has been lost. Either way, the people raising the suggestion have been heard.</p>
-    <p class="reveal">I would welcome the opportunity to discuss this with you, and would be happy to set up a meeting at a time that suits.</p>
+    <p class="reveal">Other KPMG offices have already made this bet — and it has paid off. Parramatta, Melbourne, Brisbane, and Sydney all have table tennis tables embedded in their office culture. Canberra has the chance to join them, at a cost that the team itself is helping to fund.</p>
+    <p class="reveal">The fundraiser tournament on 15 July is the first step. If the team raises its ~$275–$300 share, your matching contribution brings the full ~$550–$600 together and the table gets bought. The group is formed, the plan is in place, and the team is ready. All that is needed now is your approval to proceed.</p>
+    <p class="reveal">Thank you for the conversation so far. I would welcome the chance to discuss either option further, and would be happy to set up a time that works for you.</p>
     <div class="signature-block reveal">
       <div class="signature-name">Khubaib</div>
       <div class="signature-role">Consultant · Actuarial · KPMG Canberra<br>Graduate Representative · Grad &amp; Vacationer Committee</div>
